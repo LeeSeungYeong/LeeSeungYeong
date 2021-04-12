@@ -1,0 +1,252 @@
+:root {
+  --white-color: white;
+  --black-color: black;
+  --blue-color: blue;
+  --red-color: red;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  --padding: 12px;
+  --avatar-size: 36px;
+
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: none;
+}
+
+header {
+  padding: var(--padding);
+  color: var(--white-color);
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .rogo {
+  display: flex;
+  align-items: center;
+}
+
+header .rogo i {
+  margin-right: calc(var(--padding) / 2);
+  color: var(--red-color);
+  font-size: var(--font-large);
+}
+
+header .header_btns ul {
+  display: flex;
+}
+
+header .header_btns ul li {
+  margin-left: var(--padding);
+}
+
+.video {
+  text-align: center;
+  background-color: var(--black-color);
+  position: sticky;
+  top: 0;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+body > .infoAndUpnext > .info {
+  padding: var(--padding);
+}
+
+.info .hashtag a {
+  color: var(--blue-color);
+  font-size: var(--font-small);
+  padding-right: var(--padding);
+}
+
+.info .titleAndButton {
+  display: flex;
+}
+
+.info .titleAndButton span {
+  margin-top: var(--padding);
+}
+
+.info .titleAndButton span.clamp {
+  margin-top: var(--padding);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .titleAndButton button {
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+
+.info .titleAndButton button.clicked {
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+.info .view_info {
+  font-size: var(--font-small);
+  margin: var(--padding) 0;
+  color: var(--grey-dark-color);
+}
+
+.icons {
+  display: flex;
+  margin: calc(var(--padding) / 2);
+  justify-content: space-around;
+}
+
+.icons li button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+}
+
+.icons li button i {
+  margin: 0 auto;
+}
+
+.icons li button span {
+  margin: var(--padding);
+}
+
+.icons li button i.active {
+  color: var(--blue-color);
+}
+
+.manager {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+}
+
+.manager .manager_info {
+  display: flex;
+  align-items: center;
+  padding: var(--padding) 0;
+}
+
+.manager .manager_info .img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: var(--padding);
+}
+
+.manager .manager_info .name_sub {
+  display: flex;
+  flex-direction: column;
+}
+
+.manager .manager_info .name_sub .sub {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.manager .sub_btn button {
+  height: 100%;
+  text-transform: uppercase;
+  margin-right: var(--padding);
+  color: var(--red-color);
+}
+
+.upnext {
+  padding: var(--padding);
+}
+
+.upnext > span {
+  color: var(--grey-dark-color);
+}
+
+.upnext .oter_video_list {
+  padding: var(--padding) 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.upnext .oter_video_list .other_video {
+  display: flex;
+  margin-bottom: var(--padding);
+}
+
+.upnext .oter_video_list .other_video .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.upnext .oter_video_list .other_video .img img {
+  width: 100%;
+}
+
+.upnext .oter_video_list .other_video .info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-micro);
+}
+
+.upnext .oter_video_list .other_video .info .views {
+  color: var(--grey-dark-color);
+}
+
+.upnext .oter_video_list .other_video .look_btn {
+  flex: 1 1 5%;
+}
+
+.upnext .oter_video_list .other_video .look_btn button a i {
+  color: var(--grey-dark-color);
+}
+
+.upnext .oter_video_list .other_video .look_btn button {
+  height: 100%;
+}
+
+.infoAndUpnext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpnext {
+    flex-direction: row;
+  }
+}
